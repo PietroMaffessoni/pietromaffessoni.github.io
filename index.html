@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pietro Maffessoni</title>
-<meta name="description" content="Pietro Maffessoni. Estudante de Ciência da Computação que constrói produtos completos, do banco de dados à loja de apps.">
+<meta name="description" content="Pietro Maffessoni. Construo produtos inteiros sozinho, do modelo de dados à tela e do sensor ao aplicativo. Ciência da Computação no Instituto Mauá de Tecnologia.">
 <meta name="theme-color" content="#0a0a0b">
 <meta property="og:title" content="Pietro Maffessoni">
-<meta property="og:description" content="Construo produtos completos, do banco de dados à loja de apps.">
+<meta property="og:description" content="Construo produtos inteiros sozinho. Do modelo de dados à tela, e do sensor ao aplicativo.">
 <meta property="og:type" content="website">
 <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/azeret-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -25,9 +25,9 @@
     <a class="mark" href="#topo">Pietro Maffessoni<span>, São Paulo</span></a>
 
     <nav class="bar__nav" aria-label="Seções" data-en-aria="Sections">
+      <a href="#sobre" data-en="About">Sobre</a>
       <a href="#trabalho" data-en="Work">Trabalho</a>
       <a href="#trajetoria" data-en="Path">Trajetória</a>
-      <a href="#sobre" data-en="About">Sobre</a>
     </nav>
 
     <div class="lang" role="group" aria-label="Idioma / Language">
@@ -46,9 +46,9 @@
 
 <!-- ============================ MOBILE MENU ============================ -->
 <nav class="menu" id="menu" data-open="false" aria-label="Menu">
+  <a href="#sobre" class="display" data-en="About">Sobre</a>
   <a href="#trabalho" class="display" data-en="Work">Trabalho</a>
   <a href="#trajetoria" class="display" data-en="Path">Trajetória</a>
-  <a href="#sobre" class="display" data-en="About">Sobre</a>
   <a href="#contato" class="display" data-en="Contact">Contato</a>
   <a class="btn btn--primary" href="#contato" data-en="Get in touch">Falar comigo</a>
 </nav>
@@ -57,10 +57,10 @@
 <nav class="rail" aria-label="Navegação da página" data-en-aria="Page navigation">
   <div class="rail__track" aria-hidden="true"><div class="rail__fill"></div></div>
   <ul class="rail__list">
+    <li><a class="rail__link" href="#sobre"><span class="rail__label" data-en="About">Sobre</span></a></li>
     <li><a class="rail__link" href="#fazer"><span class="rail__label" data-en="What I do">O que eu faço</span></a></li>
     <li><a class="rail__link" href="#trabalho"><span class="rail__label" data-en="Work">Trabalho</span></a></li>
     <li><a class="rail__link" href="#trajetoria"><span class="rail__label" data-en="Path">Trajetória</span></a></li>
-    <li><a class="rail__link" href="#sobre"><span class="rail__label" data-en="About">Sobre</span></a></li>
     <li><a class="rail__link" href="#contato"><span class="rail__label" data-en="Contact">Contato</span></a></li>
   </ul>
 </nav>
@@ -75,9 +75,9 @@
         <span class="ln">Pietro</span>
         <span class="ln">Maffessoni</span>
       </h1>
-      <p class="lede hero__lede" data-en="I build complete products end to end, from the data model to the screen. Computer Science at Instituto Mauá de Tecnologia.">
-        Construo produtos inteiros, do modelo de dados à tela.
-        Ciência da Computação no Instituto Mauá de Tecnologia.
+      <p class="lede hero__lede" data-en="I build whole products on my own. From the data model to the screen, and from the sensor to the app. Computer Science at Instituto Mauá de Tecnologia.">
+        Construo produtos inteiros sozinho. Do modelo de dados à tela, e do sensor
+        ao aplicativo. Ciência da Computação no Instituto Mauá de Tecnologia.
       </p>
       <div class="hero__cta">
         <a class="btn btn--primary" href="#contato">
@@ -90,13 +90,65 @@
 
     <figure class="hero__plate">
       <div class="plate plate--portrait">
-        <!-- PLACEHOLDER: substituir pelo retrato do Pietro (3:4, mínimo 900x1200) -->
         <img src="img/retrato.jpg"
              alt="Retrato de Pietro Maffessoni"
              data-en-alt="Portrait of Pietro Maffessoni"
              width="900" height="1200" loading="eager" fetchpriority="high">
       </div>
     </figure>
+  </section>
+
+  <!-- ============================ ABOUT ============================ -->
+  <section class="wrap section" id="sobre">
+    <div class="about">
+      <div class="rise">
+        <h2 class="display d-large about__pull"
+            data-en="I learned to build by finishing things.">
+          Aprendi a construir terminando as coisas.
+        </h2>
+        <p class="body"
+           data-en="Four products built, and not one of them is a class exercise: a condominium platform that runs on iOS, Android and the browser from a single codebase, two financial products under the same brand, and a parking system that reads real sensors. I built every one of them from the database up.">
+          Quatro produtos construídos, e nenhum deles é exercício de faculdade: uma
+          plataforma de condomínio que roda em iOS, Android e navegador a partir de um
+          código só, dois produtos financeiros sob a mesma marca, e um sistema de
+          estacionamento que lê sensores de verdade. Fiz todos do banco de dados para cima.
+        </p>
+        <p class="body"
+           data-en="What I like is the part nobody photographs: working out what the problem actually is, shaping the data so the rules live in the database and not only on the screen, and staying with it until it works end to end. A screen that looks right on top of a wrong model is a problem waiting for its turn.">
+          O que eu gosto é da parte que ninguém fotografa: descobrir qual é o problema de
+          verdade, modelar o dado para a regra morar no banco e não só na tela, e ficar
+          até funcionar de ponta a ponta. Tela bonita em cima de modelo errado é problema
+          esperando a vez.
+        </p>
+        <p class="body"
+           data-en="I care about what happens after the code, too. On Nimbus I settled the pricing model before the first screen, because the cost of the banking integration changes what is worth building at all. And when a project asks for hardware I go all the way there: on VagaLume I put together the sensors, the messaging and the map.">
+          Também me importo com o que vem depois do código. No Nimbus eu decidi o modelo
+          de cobrança antes da primeira tela, porque o custo da integração bancária muda
+          o que vale a pena construir. E quando o projeto pede hardware, eu vou até lá:
+          no VagaLume montei os sensores, a mensageria e o mapa.
+        </p>
+        <p class="body"
+           data-en="I am looking for an internship or a junior role on a team where I stay responsible for a whole product, next to people who have been doing this for longer than I have.">
+          Procuro um estágio ou uma vaga júnior num time onde eu continue responsável por
+          um produto inteiro, ao lado de gente que faz isso há mais tempo que eu.
+        </p>
+      </div>
+
+      <div class="rise" style="--d: 120ms">
+        <figure class="plate plate--pano" style="margin-bottom: var(--s-5)">
+          <img src="img/bancada.jpg"
+               alt="Bancada de trabalho"
+               data-en-alt="Work bench"
+               width="1200" height="750" loading="lazy">
+        </figure>
+        <dl class="card-facts">
+          <div><dt data-en="Education">Formação</dt><dd data-en="Computer Science, Instituto Mauá de Tecnologia">Ciência da Computação, Instituto Mauá de Tecnologia</dd></div>
+          <div><dt data-en="Based in">Base</dt><dd data-en="Sao Caetano do Sul, Sao Paulo, Brazil">São Caetano do Sul, São Paulo</dd></div>
+          <div><dt data-en="Languages">Idiomas</dt><dd data-en="Portuguese, English">Português, inglês</dd></div>
+          <div><dt data-en="Looking for">Procurando</dt><dd data-en="Internship or junior developer role">Estágio ou vaga de desenvolvedor júnior</dd></div>
+        </dl>
+      </div>
+    </div>
   </section>
 
   <!-- ============================ WHAT I DO ============================ -->
@@ -107,27 +159,29 @@
           Levo produto do zero ao ar.
         </h2>
         <p class="body" style="margin-top: var(--s-5)"
-           data-en="I do not split idea, code and delivery. I frame the problem, model the database, write the app and test it until it works end to end. The three products below were built that way, alone.">
+           data-en="I do not split idea, code and delivery. I frame the problem, model the database, write the app and test it until it works end to end. The products below were built that way, alone.">
           Não separo ideia, código e entrega. Levanto o problema, modelo o banco,
-          escrevo o app e testo até funcionar ponta a ponta. Os três produtos abaixo
-          foram feitos assim, sozinho.
+          escrevo o app e testo até funcionar ponta a ponta. Os produtos abaixo foram
+          feitos assim, sozinho.
         </p>
         <p class="body"
-           data-en="Expo and React Native on the client, Supabase or Fastify and Postgres on the server, with row level security when the data belongs to more than one client. When the project asks for hardware, I build the hardware too.">
-          Expo e React Native no cliente, Supabase ou Fastify com Postgres no servidor,
-          e segurança por linha quando o dado é de mais de um cliente. Quando o projeto
-          pede hardware, eu monto o hardware.
+           data-en="Expo and React Native when it has to be an app, Next.js when it has to be the web, Supabase or Fastify with Postgres on the server, and row level security whenever the data belongs to more than one client. When the project asks for hardware, I build the hardware too.">
+          Expo e React Native quando precisa ser app, Next.js quando precisa ser web,
+          Supabase ou Fastify com Postgres no servidor, e segurança por linha sempre que
+          o dado é de mais de um cliente. Quando o projeto pede hardware, eu monto o
+          hardware.
         </p>
       </div>
 
       <div class="stack rise" style="--d: 120ms">
         <div class="stack__group">
-          <span class="annot" data-en="Product and mobile">Produto e mobile</span>
+          <span class="annot" data-en="Product and interface">Produto e interface</span>
           <div class="stack__items">
             <span class="chip"><img src="img/tech/expo.svg" alt="" width="15" height="15" loading="lazy">Expo</span>
             <span class="chip"><img src="img/tech/react.svg" alt="" width="15" height="15" loading="lazy">React Native</span>
+            <span class="chip"><img src="img/tech/nextdotjs.svg" alt="" width="15" height="15" loading="lazy">Next.js</span>
             <span class="chip"><img src="img/tech/typescript.svg" alt="" width="15" height="15" loading="lazy">TypeScript</span>
-            <span class="chip"><img src="img/tech/javascript.svg" alt="" width="15" height="15" loading="lazy">JavaScript</span>
+            <span class="chip"><img src="img/tech/tailwindcss.svg" alt="" width="15" height="15" loading="lazy">Tailwind</span>
           </div>
         </div>
         <div class="stack__group">
@@ -135,15 +189,15 @@
           <div class="stack__items">
             <span class="chip"><img src="img/tech/supabase.svg" alt="" width="15" height="15" loading="lazy">Supabase</span>
             <span class="chip"><img src="img/tech/postgresql.svg" alt="" width="15" height="15" loading="lazy">PostgreSQL</span>
-            <span class="chip"><img src="img/tech/nodedotjs.svg" alt="" width="15" height="15" loading="lazy">Node.js</span>
+            <span class="chip"><img src="img/tech/prisma.svg" alt="" width="15" height="15" loading="lazy">Prisma</span>
             <span class="chip"><img src="img/tech/fastify.svg" alt="" width="15" height="15" loading="lazy">Fastify</span>
+            <span class="chip"><img src="img/tech/nodedotjs.svg" alt="" width="15" height="15" loading="lazy">Node.js</span>
           </div>
         </div>
         <div class="stack__group">
           <span class="annot" data-en="Tools and hardware">Ferramentas e hardware</span>
           <div class="stack__items">
             <span class="chip"><img src="img/tech/git.svg" alt="" width="15" height="15" loading="lazy">Git</span>
-            <span class="chip"><img src="img/tech/github.svg" alt="" width="15" height="15" loading="lazy">GitHub</span>
             <span class="chip"><img src="img/tech/docker.svg" alt="" width="15" height="15" loading="lazy">Docker</span>
             <span class="chip"><img src="img/tech/espressif.svg" alt="" width="15" height="15" loading="lazy">ESP32</span>
             <span class="chip"><img src="img/tech/mqtt.svg" alt="" width="15" height="15" loading="lazy">MQTT</span>
@@ -165,21 +219,22 @@
       <article class="piece piece--lead rise">
         <figure class="piece__media">
           <div class="plate plate--pano">
-            <!-- PLACEHOLDER: telas do CondoOS -->
-            <img src="img/condoos.jpg"
-                 alt="Telas do aplicativo CondoOS"
-                 data-en-alt="CondoOS app screens"
+            <!-- PLACEHOLDER: telas do Zelo -->
+            <img src="img/zelo.jpg"
+                 alt="Telas do aplicativo Zelo"
+                 data-en-alt="Zelo app screens"
                  width="1800" height="780" loading="lazy">
           </div>
         </figure>
         <div class="piece__foot">
           <div class="piece__body">
-            <h3 class="display d-mid piece__title">CondoOS</h3>
+            <h3 class="display d-mid piece__title">Zelo</h3>
             <p class="piece__text"
-               data-en="An entire condominium inside one app: announcements, maintenance tickets with photos and history, common areas booked with approval, lost and found. Four access roles, one codebase for iOS, Android and web.">
-              Um condomínio inteiro dentro de um app: comunicados, chamados com foto e
-              histórico, reserva de área comum com aprovação, achados e perdidos.
-              Quatro papéis de acesso e um código só para iOS, Android e web.
+               data-en="The operating system of a condominium: announcements, maintenance tickets with photos and history, common areas booked with approval, resident requests, lost and found. Four roles, permissions enforced in the database rather than only in the interface, one codebase for iOS, Android and web.">
+              O sistema operacional do condomínio: comunicados, chamados com foto e
+              histórico, reserva de área comum com aprovação, central do morador e
+              achados e perdidos. Quatro papéis, permissão garantida no banco e não só
+              na interface, e um código só para iOS, Android e web.
             </p>
             <a class="btn btn--ghost" href="#" data-en="View the project">Ver o projeto</a>
           </div>
@@ -187,26 +242,27 @@
             <div><dt data-en="Year">Ano</dt><dd>2026</dd></div>
             <div><dt data-en="Role">Função</dt><dd data-en="Alone, product to database">Sozinho, do produto ao banco</dd></div>
             <div><dt>Stack</dt><dd>Expo, TypeScript, Supabase</dd></div>
-            <div><dt data-en="State">Estado</dt><dd data-en="MVP ready for a pilot">MVP pronto para piloto</dd></div>
+            <div><dt data-en="State">Estado</dt><dd data-en="Version 1.0, ready for a pilot">Versão 1.0, pronto para piloto</dd></div>
           </dl>
         </div>
       </article>
 
-      <!-- split -->
+      <!-- split: one brand, two products -->
       <article class="piece piece--split rise">
         <div class="piece__body">
           <h3 class="display d-mid piece__title">Nimbus</h3>
           <p class="piece__text"
-             data-en="Personal finance for people who never had that conversation at home. You add your accounts and cards and log what comes in and out; the app shows where the money went and how much of it could have been invested.">
-            Educação financeira para quem nunca teve essa conversa em casa. Você cadastra
-            contas e cartões e lança o que entra e o que sai; o app mostra para onde o
-            dinheiro foi e quanto dele poderia estar investido.
+             data-en="One brand, two products. Personal is an app for people who never had the money conversation at home: it shows where the money went and how much of it could have been invested. Business is management for a small company: customers, sales and cash flow, without the weight of an ERP.">
+            Uma marca, dois produtos. O Personal é um app para quem nunca teve a conversa
+            sobre dinheiro em casa: mostra para onde o dinheiro foi e quanto dele poderia
+            estar investido. O Business é gestão para pequena empresa: clientes, vendas e
+            fluxo de caixa, sem o peso de um ERP.
           </p>
           <dl class="facts meas">
             <div><dt data-en="Year">Ano</dt><dd>2026</dd></div>
             <div><dt data-en="Role">Função</dt><dd data-en="Alone, product to database">Sozinho, do produto ao banco</dd></div>
-            <div><dt>Stack</dt><dd>Expo, TypeScript, Supabase</dd></div>
-            <div><dt data-en="State">Estado</dt><dd data-en="In progress">Em construção</dd></div>
+            <div><dt>Personal</dt><dd data-en="Expo, Supabase, in progress">Expo, Supabase, em construção</dd></div>
+            <div><dt>Business</dt><dd>Next.js, Prisma, Postgres</dd></div>
           </dl>
           <a class="btn btn--ghost" href="#" data-en="View the project">Ver o projeto</a>
         </div>
@@ -214,8 +270,8 @@
           <div class="plate plate--wide">
             <!-- PLACEHOLDER: telas do Nimbus -->
             <img src="img/nimbus.jpg"
-                 alt="Telas do aplicativo Nimbus"
-                 data-en-alt="Nimbus app screens"
+                 alt="Telas dos produtos Nimbus"
+                 data-en-alt="Nimbus product screens"
                  width="1400" height="875" loading="lazy">
           </div>
         </figure>
@@ -224,13 +280,13 @@
       <!-- split, flipped -->
       <article class="piece piece--split is-flipped rise">
         <div class="piece__body">
-          <h3 class="display d-mid piece__title" data-en="Parking availability, Instituto Mauá">Vagas, Instituto Mauá</h3>
+          <h3 class="display d-mid piece__title">VagaLume</h3>
           <p class="piece__text"
-             data-en="Live parking availability, proven on a 1:64 scale model with sensors. The backend does not care where an event came from: sensor, scale model or simulation all arrive through the same contract. The app receives it over WebSocket and draws the map in SVG.">
+             data-en="Live parking availability, proven on a 1:64 scale model with sensors. The backend does not care where an event came from: sensor, scale model or simulator are interchangeable without changing a line of it. The app receives the change over WebSocket and draws the map in SVG.">
             Vagas de estacionamento em tempo real, provadas numa maquete 1:64 com
             sensores. O backend não sabe de onde veio o evento: sensor, maquete ou
-            simulação entram pelo mesmo contrato. O app recebe por WebSocket e desenha
-            o mapa em SVG.
+            simulador são intercambiáveis sem mudar uma linha dele. O app recebe a
+            mudança por WebSocket e desenha o mapa em SVG.
           </p>
           <dl class="facts meas">
             <div><dt data-en="Year">Ano</dt><dd>2026</dd></div>
@@ -243,7 +299,7 @@
         <figure class="piece__media">
           <div class="plate plate--wide">
             <!-- PLACEHOLDER: foto da maquete 1:64 -->
-            <img src="img/vagas.jpg"
+            <img src="img/vagalume.jpg"
                  alt="Maquete 1:64 do estacionamento com sensores"
                  data-en-alt="1:64 scale model of the parking lot with sensors"
                  width="1400" height="875" loading="lazy">
@@ -265,7 +321,7 @@
         <span class="meas entry__when">2024 - <span data-en="now">hoje</span></span>
         <span>
           <span class="entry__what" data-en="Computer Science">Ciência da Computação</span>
-          <span class="entry__where">Instituto Mauá de Tecnologia</span>
+          <span class="entry__where">Instituto Mauá de Tecnologia, São Caetano do Sul</span>
         </span>
         <span class="entry__note"
               data-en="Degree in progress. Software engineering, data structures, networks and IT project management.">
@@ -273,90 +329,7 @@
           gerenciamento de projetos de TI.
         </span>
       </li>
-      <li class="entry rise">
-        <span class="meas entry__when">2026</span>
-        <span>
-          <span class="entry__what">CondoOS</span>
-          <span class="entry__where" data-en="Own product">Produto próprio</span>
-        </span>
-        <span class="entry__note"
-              data-en="Took a multi-tenant condominium SaaS from the first sketch to a verified MVP, alone: data model, access by role, end to end tests.">
-          Levei um SaaS multi-condomínio do primeiro rascunho até um MVP verificado,
-          sozinho: modelo de dados, acesso por papel e testes ponta a ponta.
-        </span>
-      </li>
-      <li class="entry rise">
-        <span class="meas entry__when">2026</span>
-        <span>
-          <span class="entry__what">Nimbus</span>
-          <span class="entry__where" data-en="Own product">Produto próprio</span>
-        </span>
-        <span class="entry__note"
-              data-en="Second product, in progress. Same stack, different audience, and a business model decided before the first screen.">
-          Segundo produto, em construção. Mesma stack, público diferente e o modelo de
-          negócio decidido antes da primeira tela.
-        </span>
-      </li>
-      <li class="entry rise">
-        <span class="meas entry__when">2026</span>
-        <span>
-          <span class="entry__what" data-en="Integrator Project">Projeto Integrador</span>
-          <span class="entry__where">Instituto Mauá de Tecnologia</span>
-        </span>
-        <span class="entry__note"
-              data-en="Parking monitoring with a 1:64 scale model. First time putting sensors, messaging and interface into one system.">
-          Monitoramento de vagas com maquete 1:64. Primeira vez juntando sensores,
-          mensageria e interface no mesmo sistema.
-        </span>
-      </li>
     </ol>
-  </section>
-
-  <!-- ============================ ABOUT ============================ -->
-  <section class="wrap section" id="sobre">
-    <div class="about">
-      <div class="rise">
-        <h2 class="display d-large about__pull"
-            data-en="I learned to build by finishing things.">
-          Aprendi a construir terminando as coisas.
-        </h2>
-        <p class="body"
-           data-en="I learn by building. I take a problem that bothers me, model the database, write the app, and only call it done when it works end to end, with tests. That is how CondoOS went from a first sketch to an MVP ready for its first pilot building.">
-          Eu aprendo construindo. Pego um problema que me incomoda, modelo o banco,
-          escrevo o app e só considero pronto quando funciona de ponta a ponta, com
-          teste. Foi assim que o CondoOS saiu do primeiro rascunho até um MVP pronto
-          para o primeiro condomínio piloto.
-        </p>
-        <p class="body"
-           data-en="The business side interests me too. On Nimbus I settled the pricing model before the first screen, because the cost of the banking integration changes what is worth building. And when a project asks for hardware I go all the way to the hardware: on the parking system I put together the sensors, the messaging and the map.">
-          O lado de negócio também me interessa. No Nimbus eu defini o modelo de cobrança
-          antes da primeira tela, porque o custo da integração bancária muda o que vale
-          a pena construir. E quando o projeto pede hardware, eu vou até o hardware: no
-          sistema de vagas eu montei os sensores, a mensageria e o mapa.
-        </p>
-        <p class="body"
-           data-en="What I am looking for now is an internship or a junior role on a team where I stay responsible for a whole product, and learn from people with more experience than me.">
-          O que eu procuro agora é um estágio ou uma vaga júnior num time onde eu continue
-          responsável por um produto inteiro, e aprenda com gente mais experiente que eu.
-        </p>
-      </div>
-
-      <div class="rise" style="--d: 120ms">
-        <figure class="plate plate--pano" style="margin-bottom: var(--s-5)">
-          <!-- PLACEHOLDER: foto da bancada, do setup ou da maquete -->
-          <img src="img/bancada.jpg"
-               alt="Bancada de trabalho"
-               data-en-alt="Work bench"
-               width="1200" height="750" loading="lazy">
-        </figure>
-        <dl class="card-facts">
-          <div><dt data-en="Education">Formação</dt><dd data-en="Computer Science, Instituto Mauá de Tecnologia">Ciência da Computação, Instituto Mauá de Tecnologia</dd></div>
-          <div><dt data-en="Based in">Base</dt><dd data-en="Sao Caetano do Sul, Sao Paulo, Brazil">São Caetano do Sul, São Paulo</dd></div>
-          <div><dt data-en="Languages">Idiomas</dt><dd data-en="Portuguese, English">Português, inglês</dd></div>
-          <div><dt data-en="Looking for">Procurando</dt><dd data-en="Internship or junior developer role">Estágio ou vaga de desenvolvedor júnior</dd></div>
-        </dl>
-      </div>
-    </div>
   </section>
 
   <!-- ============================ CONTACT ============================ -->
