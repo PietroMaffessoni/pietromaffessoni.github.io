@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pietro Maffessoni</title>
+<meta name="description" content="Pietro Maffessoni. Estudante de Ciência da Computação que constrói produtos completos, do banco de dados à loja de apps.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:title" content="Pietro Maffessoni">
+<meta property="og:description" content="Construo produtos completos, do banco de dados à loja de apps.">
+<meta property="og:type" content="website">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/azeret-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-en="Skip to content">Pular para o conteúdo</a>
+
+<div class="lamp" aria-hidden="true"></div>
+
+<!-- ============================ TOP BAR ============================ -->
+<header class="bar">
+  <div class="bar__inner">
+    <a class="mark" href="#topo">Pietro Maffessoni<span>, São Paulo</span></a>
+
+    <nav class="bar__nav" aria-label="Seções" data-en-aria="Sections">
+      <a href="#trabalho" data-en="Work">Trabalho</a>
+      <a href="#trajetoria" data-en="Path">Trajetória</a>
+      <a href="#sobre" data-en="About">Sobre</a>
+    </nav>
+
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <a class="btn btn--primary btn--sm" href="#contato" data-en="Get in touch">Falar comigo</a>
+
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"
+            aria-label="Abrir menu" data-en-aria="Open menu">
+      <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================ MOBILE MENU ============================ -->
+<nav class="menu" id="menu" data-open="false" aria-label="Menu">
+  <a href="#trabalho" class="display" data-en="Work">Trabalho</a>
+  <a href="#trajetoria" class="display" data-en="Path">Trajetória</a>
+  <a href="#sobre" class="display" data-en="About">Sobre</a>
+  <a href="#contato" class="display" data-en="Contact">Contato</a>
+  <a class="btn btn--primary" href="#contato" data-en="Get in touch">Falar comigo</a>
+</nav>
+
+<!-- ============================ LEFT RAIL ============================ -->
+<nav class="rail" aria-label="Navegação da página" data-en-aria="Page navigation">
+  <div class="rail__track" aria-hidden="true"><div class="rail__fill"></div></div>
+  <ul class="rail__list">
+    <li><a class="rail__link" href="#fazer"><span class="rail__label" data-en="What I do">O que eu faço</span></a></li>
+    <li><a class="rail__link" href="#trabalho"><span class="rail__label" data-en="Work">Trabalho</span></a></li>
+    <li><a class="rail__link" href="#trajetoria"><span class="rail__label" data-en="Path">Trajetória</span></a></li>
+    <li><a class="rail__link" href="#sobre"><span class="rail__label" data-en="About">Sobre</span></a></li>
+    <li><a class="rail__link" href="#contato"><span class="rail__label" data-en="Contact">Contato</span></a></li>
+  </ul>
+</nav>
+
+<div class="shell">
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="wrap hero stage" id="topo">
+    <div>
+      <h1 class="display d-hero hero__name">
+        <span class="ln">Pietro</span>
+        <span class="ln">Maffessoni</span>
+      </h1>
+      <p class="lede hero__lede" data-en="I build complete products, from the database to the app store. Computer Science at Instituto Mauá de Tecnologia.">
+        Construo produtos completos, do banco de dados à loja de apps.
+        Ciência da Computação no Instituto Mauá de Tecnologia.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#contato">
+          <span data-en="Get in touch">Falar comigo</span>
+          <span class="btn__tick" aria-hidden="true"></span>
+        </a>
+        <a class="btn btn--ghost" href="#trabalho" data-en="See the work">Ver os projetos</a>
+      </div>
+    </div>
+
+    <figure class="hero__plate">
+      <div class="plate plate--portrait">
+        <!-- PLACEHOLDER: substituir pelo retrato do Pietro (3:4, mínimo 900x1200) -->
+        <img src="https://picsum.photos/seed/pietro-retrato-oficina/900/1200"
+             alt="Retrato de Pietro Maffessoni"
+             data-en-alt="Portrait of Pietro Maffessoni"
+             width="900" height="1200" loading="eager" fetchpriority="high">
+      </div>
+    </figure>
+  </section>
+
+  <!-- ============================ WHAT I DO ============================ -->
+  <section class="wrap section" id="fazer">
+    <div class="stmt">
+      <div class="rise">
+        <h2 class="display d-large" data-en="I take a product from nothing to live.">
+          Levo produto do zero ao ar.
+        </h2>
+        <p class="body" style="margin-top: var(--s-5)"
+           data-en="I do not split idea, code and delivery. I frame the problem, design the flow, write the app and the database, publish it and watch how it gets used. That is how the three products below were made.">
+          Não separo ideia, código e entrega. Levanto o problema, desenho o fluxo,
+          escrevo o app e o banco, publico e acompanho o uso. Foi assim nos três
+          produtos abaixo.
+        </p>
+        <p class="body"
+           data-en="Mostly Expo and React Native on the client, Supabase and Postgres on the server. When the project asks for hardware, I build the hardware too.">
+          Trabalho principalmente com Expo e React Native no cliente, Supabase e
+          Postgres no servidor. Quando o projeto pede hardware, eu monto o hardware.
+        </p>
+      </div>
+
+      <div class="stack rise" style="--d: 120ms">
+        <div class="stack__group">
+          <span class="annot" data-en="Product and mobile">Produto e mobile</span>
+          <div class="stack__items">
+            <span class="chip"><img src="https://cdn.simpleicons.org/expo/a0a0a8" alt="" width="15" height="15" loading="lazy">Expo</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/react/a0a0a8" alt="" width="15" height="15" loading="lazy">React Native</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/typescript/a0a0a8" alt="" width="15" height="15" loading="lazy">TypeScript</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/javascript/a0a0a8" alt="" width="15" height="15" loading="lazy">JavaScript</span>
+          </div>
+        </div>
+        <div class="stack__group">
+          <span class="annot" data-en="Backend and data">Backend e dados</span>
+          <div class="stack__items">
+            <span class="chip"><img src="https://cdn.simpleicons.org/supabase/a0a0a8" alt="" width="15" height="15" loading="lazy">Supabase</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/postgresql/a0a0a8" alt="" width="15" height="15" loading="lazy">PostgreSQL</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/nodedotjs/a0a0a8" alt="" width="15" height="15" loading="lazy">Node.js</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/python/a0a0a8" alt="" width="15" height="15" loading="lazy">Python</span>
+          </div>
+        </div>
+        <div class="stack__group">
+          <span class="annot" data-en="Tools and hardware">Ferramentas e hardware</span>
+          <div class="stack__items">
+            <span class="chip"><img src="https://cdn.simpleicons.org/git/a0a0a8" alt="" width="15" height="15" loading="lazy">Git</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/github/a0a0a8" alt="" width="15" height="15" loading="lazy">GitHub</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/figma/a0a0a8" alt="" width="15" height="15" loading="lazy">Figma</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/arduino/a0a0a8" alt="" width="15" height="15" loading="lazy">Arduino</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WORK ============================ -->
+  <section class="wrap section" id="trabalho">
+    <div class="section__head rise">
+      <h2 class="display d-large" data-en="Selected work">Trabalho selecionado</h2>
+    </div>
+
+    <div class="work">
+
+      <!-- lead piece: full plate, facts beside the text -->
+      <article class="piece piece--lead rise">
+        <figure class="piece__media">
+          <div class="plate plate--pano">
+            <!-- PLACEHOLDER: telas do CondoOS -->
+            <img src="https://picsum.photos/seed/condoos-telas/1800/780"
+                 alt="Telas do aplicativo CondoOS"
+                 data-en-alt="CondoOS app screens"
+                 width="1800" height="780" loading="lazy">
+          </div>
+        </figure>
+        <div class="piece__foot">
+          <div class="piece__body">
+            <h3 class="display d-mid piece__title">CondoOS</h3>
+            <p class="piece__text"
+               data-en="Condominium management turned into software: residents, bookings, deliveries and announcements in one app, with a real database behind it instead of a group chat.">
+              Gestão de condomínio virando software: moradores, reservas, encomendas e
+              comunicados em um app só, com banco de dados de verdade no lugar do grupo
+              de mensagens.
+            </p>
+            <a class="btn btn--ghost" href="#" data-en="View the project">Ver o projeto</a>
+          </div>
+          <dl class="facts meas">
+            <div><dt data-en="Year">Ano</dt><dd>2025 - 2026</dd></div>
+            <div><dt data-en="Role">Função</dt><dd data-en="Product and development">Produto e desenvolvimento</dd></div>
+            <div><dt>Stack</dt><dd>Expo, Supabase, Postgres</dd></div>
+            <div><dt data-en="State">Estado</dt><dd data-en="Working MVP">MVP funcionando</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- split -->
+      <article class="piece piece--split rise">
+        <div class="piece__body">
+          <h3 class="display d-mid piece__title">Nimbus</h3>
+          <p class="piece__text"
+             data-en="Personal finance education for people who never had that conversation at home: follow what comes in, understand where it goes, learn while using it.">
+            Educação financeira para quem nunca teve essa conversa em casa: acompanhar
+            o que entra, entender para onde vai e aprender no meio do uso.
+          </p>
+          <dl class="facts meas">
+            <div><dt data-en="Year">Ano</dt><dd>2026</dd></div>
+            <div><dt data-en="Role">Função</dt><dd data-en="Product and development">Produto e desenvolvimento</dd></div>
+            <div><dt>Stack</dt><dd>Expo, Supabase</dd></div>
+            <div><dt data-en="State">Estado</dt><dd data-en="In progress">Em construção</dd></div>
+          </dl>
+          <a class="btn btn--ghost" href="#" data-en="View the project">Ver o projeto</a>
+        </div>
+        <figure class="piece__media">
+          <div class="plate plate--wide">
+            <!-- PLACEHOLDER: telas do Nimbus -->
+            <img src="https://picsum.photos/seed/nimbus-financas/1400/875"
+                 alt="Telas do aplicativo Nimbus"
+                 data-en-alt="Nimbus app screens"
+                 width="1400" height="875" loading="lazy">
+          </div>
+        </figure>
+      </article>
+
+      <!-- split, flipped -->
+      <article class="piece piece--split is-flipped rise">
+        <div class="piece__body">
+          <h3 class="display d-mid piece__title" data-en="Parking availability, Instituto Mauá">Vagas, Instituto Mauá</h3>
+          <p class="piece__text"
+             data-en="Live parking availability for the campus, proven on a 1:64 scale model: sensors in the bays, a board reading them, and a screen showing what is free.">
+            Vagas do campus em tempo real, provado em uma maquete 1:64: sensores nas
+            vagas, uma placa lendo tudo e uma tela mostrando o que está livre.
+          </p>
+          <dl class="facts meas">
+            <div><dt data-en="Year">Ano</dt><dd>2025</dd></div>
+            <div><dt data-en="Role">Função</dt><dd data-en="Software and hardware">Software e hardware</dd></div>
+            <div><dt>Stack</dt><dd data-en="Arduino, Python, 1:64 scale model">Arduino, Python, maquete 1:64</dd></div>
+            <div><dt data-en="State">Estado</dt><dd data-en="Academic project">Projeto acadêmico</dd></div>
+          </dl>
+          <a class="btn btn--ghost" href="#" data-en="View the project">Ver o projeto</a>
+        </div>
+        <figure class="piece__media">
+          <div class="plate plate--wide">
+            <!-- PLACEHOLDER: foto da maquete 1:64 -->
+            <img src="https://picsum.photos/seed/maquete-vagas-164/1400/875"
+                 alt="Maquete 1:64 do estacionamento com sensores"
+                 data-en-alt="1:64 scale model of the parking lot with sensors"
+                 width="1400" height="875" loading="lazy">
+          </div>
+        </figure>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================ PATH ============================ -->
+  <section class="wrap section" id="trajetoria">
+    <div class="section__head rise">
+      <h2 class="display d-large" data-en="Path">Trajetória</h2>
+    </div>
+
+    <ol class="path">
+      <li class="entry rise">
+        <span class="meas entry__when">2024 - <span data-en="now">hoje</span></span>
+        <span>
+          <span class="entry__what" data-en="Computer Science">Ciência da Computação</span>
+          <span class="entry__where">Instituto Mauá de Tecnologia</span>
+        </span>
+        <span class="entry__note"
+              data-en="Degree in progress. Software engineering, data structures, networks and IT project management.">
+          Graduação em andamento. Engenharia de software, estruturas de dados, redes e
+          gerenciamento de projetos de TI.
+        </span>
+      </li>
+      <li class="entry rise">
+        <span class="meas entry__when">2026</span>
+        <span>
+          <span class="entry__what">CondoOS</span>
+          <span class="entry__where" data-en="Own product">Produto próprio</span>
+        </span>
+        <span class="entry__note"
+              data-en="Took a condominium management SaaS from the first sketch to a working MVP.">
+          Levei um SaaS de gestão de condomínios do primeiro rascunho até um MVP
+          funcionando.
+        </span>
+      </li>
+      <li class="entry rise">
+        <span class="meas entry__when">2026</span>
+        <span>
+          <span class="entry__what">Nimbus</span>
+          <span class="entry__where" data-en="Own product">Produto próprio</span>
+        </span>
+        <span class="entry__note"
+              data-en="Second product in the making: personal finance education, same stack, different audience.">
+          Segundo produto em construção: educação financeira pessoal, mesma stack,
+          público diferente.
+        </span>
+      </li>
+      <li class="entry rise">
+        <span class="meas entry__when">2025</span>
+        <span>
+          <span class="entry__what" data-en="Integrator Project">Projeto Integrador</span>
+          <span class="entry__where">Instituto Mauá de Tecnologia</span>
+        </span>
+        <span class="entry__note"
+              data-en="Parking monitoring with a 1:64 scale model. First time putting sensors, board and interface together.">
+          Monitoramento de vagas com maquete 1:64. Primeira vez juntando sensores,
+          placa e interface.
+        </span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============================ ABOUT ============================ -->
+  <section class="wrap section" id="sobre">
+    <div class="about">
+      <div class="rise">
+        <h2 class="display d-large about__pull"
+            data-en="I learned to build by finishing things.">
+          Aprendi a construir terminando as coisas.
+        </h2>
+        <p class="body"
+           data-en="Placeholder. Two or three paragraphs about who you are, how you got into software, what you like building and what you are looking for now. We write this together, in your own words, so a recruiter hears you and not a template.">
+          Texto provisório. Dois ou três parágrafos sobre quem você é, como entrou em
+          software, o que gosta de construir e o que procura agora. Vamos escrever
+          juntos, com as suas palavras, para o recrutador ouvir você e não um modelo.
+        </p>
+        <p class="body"
+           data-en="Placeholder. A good place for the honest part: what you still do not know, what you are studying right now, how you work with other people.">
+          Texto provisório. Um bom lugar para a parte honesta: o que você ainda não
+          sabe, o que está estudando agora e como você trabalha com outras pessoas.
+        </p>
+      </div>
+
+      <div class="rise" style="--d: 120ms">
+        <figure class="plate plate--pano" style="margin-bottom: var(--s-5)">
+          <!-- PLACEHOLDER: foto da bancada, do setup ou da maquete -->
+          <img src="https://picsum.photos/seed/bancada-trabalho-pietro/1200/750"
+               alt="Bancada de trabalho"
+               data-en-alt="Work bench"
+               width="1200" height="750" loading="lazy">
+        </figure>
+        <dl class="card-facts">
+          <div><dt data-en="Education">Formação</dt><dd data-en="Computer Science, Instituto Mauá de Tecnologia">Ciência da Computação, Instituto Mauá de Tecnologia</dd></div>
+          <div><dt data-en="Based in">Base</dt><dd>São Paulo, Brasil</dd></div>
+          <div><dt data-en="Languages">Idiomas</dt><dd data-en="Portuguese, English">Português, inglês</dd></div>
+          <div><dt data-en="Looking for">Procurando</dt><dd data-en="Internship or junior developer role">Estágio ou vaga de desenvolvedor júnior</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section class="wrap section" id="contato">
+    <div class="contact">
+      <div class="rise">
+        <h2 class="display d-large" data-en="Let's talk.">Vamos conversar.</h2>
+        <p class="lede" style="margin-top: var(--s-4)"
+           data-en="If you are hiring for an internship or a junior developer role, write to me. I answer every message.">
+          Se você está contratando para estágio ou uma vaga de desenvolvedor júnior,
+          me escreve. Eu respondo todas as mensagens.
+        </p>
+      </div>
+
+      <div class="rise" style="--d: 100ms">
+        <a class="mailto" href="mailto:pietromaffepena@gmail.com">pietromaffepena@gmail.com</a>
+      </div>
+
+      <div class="reach rise" style="--d: 180ms">
+        <a href="#" rel="noopener">
+          <span class="annot">LinkedIn</span>
+          <span>/in/pietromaffessoni</span>
+        </a>
+        <a href="#" rel="noopener">
+          <span class="annot">GitHub</span>
+          <span>@pietromaffessoni</span>
+        </a>
+        <span>
+          <span class="annot" data-en="Availability">Disponibilidade</span>
+          <span class="status meas" data-en="Open to internship and junior roles">Aberto a estágio e vaga júnior</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <span class="meas foot__note">Pietro Maffessoni, 2026</span>
+  <a class="meas to-top" href="#topo">
+    <span class="btn__tick" aria-hidden="true"></span>
+    <span data-en="Back to top">Voltar ao topo</span>
+  </a>
+</footer>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
