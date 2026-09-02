@@ -10,6 +10,35 @@
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------------------------------------------------------------------
+     0. Where the page opens. The browser restores the old scroll position
+        on a reload, which dropped the visitor into the middle of the page
+        instead of on the name. A reload now always opens at the top; a
+        link someone shared with a #section still lands on that section.
+     --------------------------------------------------------------------- */
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+  var navEntry = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0]) || null;
+  var reloaded = navEntry ? navEntry.type === "reload" : false;
+
+  function toTop() {
+    // inline auto beats the stylesheet smooth, so the jump is instant
+    var prev = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = prev;
+  }
+
+  if (reloaded && location.hash) {
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+  if (reloaded || !location.hash) {
+    toTop();
+    window.addEventListener("load", function () {
+      if (!location.hash) toTop();
+    }, { once: true });
+  }
+
+  /* ---------------------------------------------------------------------
      1. Language. PT is what ships in the HTML, EN rides in data attributes.
      --------------------------------------------------------------------- */
   var STORE_KEY = "pm-lang";

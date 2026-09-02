@@ -155,6 +155,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   inset: 0;
   z-index: var(--z-lamp);
   pointer-events: none;
+  transform: translateZ(0);
   background:
     radial-gradient(118vw 92vh at 78% -16%, rgba(242, 184, 114, 0.22), transparent 58%),
     radial-gradient(62vw 58vh at 94% 0%, rgba(242, 184, 114, 0.14), transparent 66%),
@@ -218,9 +219,9 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   height: var(--bar-h);
   display: flex;
   align-items: center;
-  background: rgba(10, 10, 11, 0.76);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  background: rgba(10, 10, 11, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
 @supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
@@ -333,6 +334,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   background: var(--lamp);
   transform: scaleY(0);
   transform-origin: top;
+  will-change: transform;
 }
 @supports (animation-timeline: scroll()) {
   .rail__fill { animation: railfill linear both; animation-timeline: scroll(root block); }
@@ -392,6 +394,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   background: var(--plate);
   border: 1px solid var(--line);
   isolation: isolate;
+  contain: paint;
 }
 .plate img {
   width: 100%;
@@ -536,7 +539,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 @media (min-width: 820px) {
   .entry { grid-template-columns: 128px minmax(0, 1fr) minmax(0, 1fr); align-items: baseline; }
 }
-.entry:hover { background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 72%); }
+.entry:hover { background-color: rgba(255, 255, 255, 0.022); }
 .entry__when { color: var(--text-3); }
 .entry__what { font-stretch: 96%; font-weight: 600; font-size: 1.25rem; }
 .entry__where { color: var(--text-3); font-size: 1rem; display: block; margin-top: 5px; }
@@ -616,8 +619,8 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   inset: var(--bar-h) 0 0;
   z-index: var(--z-menu);
   background: rgba(10, 10, 11, 0.97);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   padding: var(--s-6) var(--gutter);
   display: flex;
   flex-direction: column;
