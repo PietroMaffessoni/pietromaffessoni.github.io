@@ -54,9 +54,9 @@
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
 
+  // Portuguese is the default. Only a choice the visitor made before switches it.
   var saved = null;
   try { saved = localStorage.getItem(STORE_KEY); } catch (e) { saved = null; }
-  if (!saved && (navigator.language || "").toLowerCase().indexOf("pt") !== 0) saved = "en";
   if (saved === "en") setLang("en");
 
   /* ---------------------------------------------------------------------
