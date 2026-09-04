@@ -1,7 +1,7 @@
 /* =========================================================================
-   Pietro Maffessoni - portfolio
-   Three jobs: the language switch, the light coming up on the work,
-   and knowing where you are on the page. Nothing listens to scroll.
+   Portfólio, Pietro Maffessoni
+   Quatro coisas: idioma, a luz que sobe no topo, saber em que seção você
+   está e copiar o e-mail. Nada aqui escuta o scroll.
    ========================================================================= */
 (function () {
   "use strict";
@@ -10,10 +10,10 @@
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------------------------------------------------------------------
-     0. Where the page opens. The browser restores the old scroll position
-        on a reload, which dropped the visitor into the middle of the page
-        instead of on the name. A reload now always opens at the top; a
-        link someone shared with a #section still lands on that section.
+     0. Onde a página abre. Por padrão o navegador guarda a posição da
+        rolagem e devolve ela no reload, o que jogava a pessoa no meio da
+        página em vez do nome. Agora o reload sempre abre no topo, mas um
+        link com #secao continua caindo na seção certa.
      --------------------------------------------------------------------- */
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
@@ -21,7 +21,7 @@
   var reloaded = navEntry ? navEntry.type === "reload" : false;
 
   function toTop() {
-    // inline auto beats the stylesheet smooth, so the jump is instant
+    // o auto inline ganha do smooth do CSS, então o salto é instantâneo
     var prev = root.style.scrollBehavior;
     root.style.scrollBehavior = "auto";
     window.scrollTo(0, 0);
@@ -39,7 +39,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     1. Language. PT is what ships in the HTML, EN rides in data attributes.
+     1. Idioma. O português está no HTML, o inglês vem nos data-en.
      --------------------------------------------------------------------- */
   var STORE_KEY = "pm-lang";
   var textNodes = document.querySelectorAll("[data-en]");
@@ -47,7 +47,7 @@
   var ariaNodes = document.querySelectorAll("[data-en-aria]");
   var langButtons = document.querySelectorAll(".lang button");
 
-  // keep the Portuguese original before anything is swapped
+  // guarda o português antes de qualquer troca
   textNodes.forEach(function (el) {
     if (!el.hasAttribute("data-pt")) el.setAttribute("data-pt", el.textContent.trim());
   });
@@ -76,20 +76,20 @@
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });
 
-    try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* private mode */ }
+    try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* aba anônima */ }
   }
 
   langButtons.forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
 
-  // Portuguese is the default. Only a choice the visitor made before switches it.
+  // português é o padrão, só troca se a pessoa já tiver escolhido inglês antes
   var saved = null;
   try { saved = localStorage.getItem(STORE_KEY); } catch (e) { saved = null; }
   if (saved === "en") setLang("en");
 
   /* ---------------------------------------------------------------------
-     2. The lamp comes up on the first viewport, once.
+     2. A luz sobe no topo, uma vez só.
      --------------------------------------------------------------------- */
   var stage = document.querySelector(".stage");
   if (stage) {
@@ -103,7 +103,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     3. Work rises into the light as it arrives. Once per element.
+     3. Cada bloco entra na luz quando chega na tela, uma vez por elemento.
      --------------------------------------------------------------------- */
   var risers = document.querySelectorAll(".rise");
 
@@ -122,7 +122,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     4. Where you are: the rail marks the section crossing the middle.
+     4. O trilho marca a seção que está passando pelo meio da tela.
      --------------------------------------------------------------------- */
   var railLinks = Array.prototype.slice.call(document.querySelectorAll(".rail__link"));
 
@@ -156,15 +156,14 @@
   }
 
   /* ---------------------------------------------------------------------
-     4b. The year in the footer writes itself, so the page does not go stale.
+     4b. O ano do rodapé se escreve sozinho, para o site não envelhecer.
      --------------------------------------------------------------------- */
   var yearEl = document.querySelector(".js-year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   /* ---------------------------------------------------------------------
-     4c. The address. A mailto: link only goes anywhere when the visitor
-         has a mail app set up, and plenty of people do not, so the
-         address can be copied as well.
+     4c. O e-mail. O mailto: só abre alguma coisa em quem tem aplicativo de
+         e-mail configurado, e muita gente não tem, então dá para copiar.
      --------------------------------------------------------------------- */
   var copyBtn = document.querySelector(".copy");
   var said = document.querySelector(".copy__said");
@@ -172,7 +171,7 @@
   if (copyBtn && said) {
     var saidTimer = null;
 
-    // last resort: leave the address selected so Ctrl+C is enough
+    // último recurso: deixar o e-mail selecionado, aí basta o Ctrl+C
     var selectAddress = function () {
       var link = document.querySelector(".mailto");
       if (!link || !window.getSelection || !document.createRange) return;
@@ -212,7 +211,7 @@
 
     copyBtn.addEventListener("click", function () {
       var text = copyBtn.getAttribute("data-copy");
-      // the clipboard API needs a secure context, and file:// is not one
+      // a API de clipboard precisa de contexto seguro, e file:// não é
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(
           function () { tell(true); },
@@ -225,7 +224,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     5. Mobile menu.
+     5. Menu do celular.
      --------------------------------------------------------------------- */
   var menuBtn = document.querySelector(".menu-btn");
   var menu = document.getElementById("menu");

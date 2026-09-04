@@ -1,10 +1,10 @@
 /* =========================================================================
-   Pietro Maffessoni - portfolio
-   World: a model shop presentation table under one working lamp.
-   The only color on the page is the light in the room.
+   Portfólio, Pietro Maffessoni
+   A ideia é uma mesa de maquete embaixo de uma luminaria acesa.
+   A única cor da página é a luz.
    ========================================================================= */
 
-/* ---------- Faces (self-hosted) ---------------------------------------- */
+/* ---------- Fontes, todas locais ---------------------------------------- */
 @font-face {
   font-family: "Archivo";
   src: url("fonts/archivo-latin.woff2") format("woff2");
@@ -50,7 +50,7 @@
 
 /* ---------- Tokens ------------------------------------------------------ */
 :root {
-  /* ground and lit surfaces: the table darkens as it leaves the lamp */
+  /* fundo e superfícies: a mesa escurece conforme sai da luz */
   --ink: #0a0a0b;
   --ink-lit: #121214;
   --plate: #17171a;
@@ -63,7 +63,7 @@
   --text-2: #a0a0a8;
   --text-3: #7e7e87;
 
-  /* the lamp. the only color on the page. */
+  /* a luz, única cor da página */
   --lamp: #f2b872;
   --lamp-line: rgba(242, 184, 114, 0.42);
 
@@ -80,7 +80,7 @@
   --s-7: 64px;
   --s-8: 96px;
 
-  /* every edge on this page is cut, not rounded */
+  /* nada arredondado nesta página */
   --radius: 0px;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -126,7 +126,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
 ul, ol { list-style: none; padding: 0; margin: 0; }
 
-/* ---------- Browser surfaces: these belong to the design too ------------ */
+/* ---------- Coisas do navegador que também fazem parte do visual ------- */
 ::selection { background: var(--lamp); color: #0a0a0b; }
 html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: var(--lamp); }
 ::-webkit-scrollbar { width: 11px; height: 11px; }
@@ -149,7 +149,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 }
 .skip:focus-visible { transform: translateY(0); }
 
-/* ---------- The lamp ---------------------------------------------------- */
+/* ---------- A luz ------------------------------------------------------- */
 .lamp {
   position: fixed;
   inset: 0;
@@ -162,7 +162,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
     radial-gradient(90vw 70vh at 50% 118%, rgba(255, 255, 255, 0.04), transparent 62%);
 }
 
-/* ---------- Type -------------------------------------------------------- */
+/* ---------- Tipografia -------------------------------------------------- */
 .display {
   font-weight: 660;
   font-stretch: 118%;
@@ -174,7 +174,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .d-large { font-size: clamp(2.25rem, 5.4vw, 4rem); }
 .d-mid   { font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.02; }
 
-/* annotation voice: the lettering on a drawing */
+/* legenda, no espírito de anotação em desenho técnico */
 .annot {
   font-stretch: 86%;
   font-weight: 560;
@@ -184,7 +184,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   color: var(--text-3);
 }
 
-/* measurement voice: reserved for measured facts */
+/* dado medido, só para número e ficha técnica */
 .meas {
   font-family: "Azeret Mono", ui-monospace, monospace;
   font-size: 0.8125rem;
@@ -198,7 +198,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .body { color: var(--text-2); max-width: var(--measure); }
 .body + .body { margin-top: var(--s-4); }
 
-/* ---------- Shell ------------------------------------------------------- */
+/* ---------- Estrutura --------------------------------------------------- */
 .shell { margin-left: var(--rail-w); position: relative; z-index: var(--z-body); }
 .wrap {
   width: 100%;
@@ -211,7 +211,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .section + .section { border-top: 1px solid var(--line); }
 .section__head { margin-bottom: clamp(40px, 5vw, 72px); }
 
-/* ---------- Top bar ----------------------------------------------------- */
+/* ---------- Barra do topo ----------------------------------------------- */
 .bar {
   position: sticky;
   top: 0;
@@ -252,7 +252,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .bar__nav a { font-size: 1rem; color: var(--text-2); transition: color .2s var(--ease-soft); }
 .bar__nav a:hover { color: var(--text); }
 
-/* small screens: the bar keeps the name, the language and the menu. nothing else fits. */
+/* tela pequena: cabe só o nome, o idioma e o menu */
 @media (max-width: 719.98px) {
   .bar__inner { gap: var(--s-3); }
   .bar .btn--primary { display: none; }
@@ -283,7 +283,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .lang button:hover { color: var(--text); }
 .lang button[aria-pressed="true"]:hover { color: var(--ink); }
 
-/* ---------- Buttons ----------------------------------------------------- */
+/* ---------- Botões ------------------------------------------------------ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -313,7 +313,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 }
 .btn:hover .btn__tick, .to-top:hover .btn__tick { transform: scaleX(1); }
 
-/* ---------- Left drafting rail ----------------------------------------- */
+/* ---------- Trilho lateral ---------------------------------------------- */
 .rail {
   position: fixed;
   inset-block: 0;
@@ -367,7 +367,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .rail__label { font-stretch: 86%; font-weight: 560; font-size: 0.6875rem;
                letter-spacing: 0.14em; text-transform: uppercase; }
 
-/* ---------- Hero -------------------------------------------------------- */
+/* ---------- Topo -------------------------------------------------------- */
 .hero {
   min-height: calc(100dvh - var(--bar-h));
   display: grid;
@@ -387,7 +387,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .hero__plate { position: relative; align-self: end; }
 @media (max-width: 899.98px) { .hero__plate { max-width: 320px; } }
 
-/* the plate: an object photographed on the table, raked by the lamp */
+/* a chapa: um objeto fotografado na mesa, com a luz batendo de lado */
 .plate {
   position: relative;
   overflow: hidden;
@@ -403,7 +403,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   filter: grayscale(1) contrast(1.1) brightness(0.6);
   transition: transform .9s var(--ease), filter .6s var(--ease-soft);
 }
-/* the lamp falls on every plate from the same direction */
+/* a luz bate em todas as chapas do mesmo lado */
 .plate::after {
   content: "";
   position: absolute;
@@ -428,7 +428,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .plate--pano { aspect-ratio: 21 / 9; }
 @media (max-width: 719.98px) { .plate--pano { aspect-ratio: 4 / 3; } }
 
-/* ---------- Statement + stack ------------------------------------------ */
+/* ---------- Texto + ferramentas ----------------------------------------- */
 .stmt { display: grid; gap: clamp(36px, 5vw, 72px); }
 @media (min-width: 1024px) {
   .stmt { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
@@ -456,7 +456,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .chip:hover { border-color: var(--line-strong); color: var(--text); background: var(--plate); }
 .chip img { width: 15px; height: 15px; opacity: .7; flex: none; }
 
-/* ---------- Work -------------------------------------------------------- */
+/* ---------- Projetos ---------------------------------------------------- */
 .work { display: grid; gap: clamp(64px, 8vw, 120px); }
 .piece { display: grid; gap: clamp(24px, 3.4vw, 48px); }
 
@@ -471,7 +471,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .piece__text { color: var(--text-2); max-width: 54ch; margin-bottom: var(--s-5); }
 .piece__links { display: flex; flex-wrap: wrap; gap: var(--s-3); }
 
-/* measured facts: the only place mono is allowed to speak */
+/* ficha técnica, o único lugar com fonte mono */
 .facts { width: 100%; max-width: 460px; margin-bottom: var(--s-5); }
 .facts > div {
   display: flex;
@@ -485,7 +485,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .facts dd { color: var(--text); text-align: right; }
 
 .piece__media { position: relative; }
-/* call-out leader: ties the object to its facts. desktop only. */
+/* tracinho que liga a imagem à ficha, só no desktop */
 @media (min-width: 900px) {
   .piece--split .piece__media::before {
     content: "";
@@ -527,7 +527,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   padding: 5px 10px;
 }
 
-/* ---------- Trajectory -------------------------------------------------- */
+/* ---------- Trajetória -------------------------------------------------- */
 .path { border-top: 1px solid var(--line); }
 .entry {
   display: grid;
@@ -545,7 +545,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .entry__where { color: var(--text-3); font-size: 1rem; display: block; margin-top: 5px; }
 .entry__note { color: var(--text-2); font-size: 1rem; max-width: 52ch; }
 
-/* ---------- About ------------------------------------------------------- */
+/* ---------- Sobre ------------------------------------------------------- */
 .about { display: grid; gap: clamp(40px, 5vw, 80px); }
 @media (min-width: 1024px) { .about { grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); } }
 .about__pull { margin-bottom: var(--s-6); }
@@ -562,7 +562,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 }
 .card-facts dd { color: var(--text); }
 
-/* ---------- Contact ----------------------------------------------------- */
+/* ---------- Contato ----------------------------------------------------- */
 .contact { display: grid; gap: clamp(36px, 5vw, 64px); }
 .mailto {
   display: inline-block;
@@ -595,7 +595,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 .reach a:hover span:last-child { color: var(--lamp); }
 .reach .status { font-size: 0.8125rem; }
 
-/* ---------- Footer ------------------------------------------------------ */
+/* ---------- Rodapé ------------------------------------------------------ */
 .foot {
   border-top: 1px solid var(--line);
   padding-block: var(--s-6);
@@ -610,7 +610,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
           transition: color .2s var(--ease-soft); }
 .to-top:hover { color: var(--text); }
 
-/* ---------- Mobile menu ------------------------------------------------- */
+/* ---------- Menu do celular --------------------------------------------- */
 .menu-btn { display: inline-flex; align-items: center; gap: 9px; cursor: pointer; padding: 8px 0; }
 @media (min-width: 720px) { .menu-btn { display: none; } }
 .menu-btn__bars { display: grid; gap: 4px; width: 18px; }
@@ -647,7 +647,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 }
 .menu .btn { margin-top: var(--s-5); align-self: flex-start; }
 
-/* ---------- The one authored moment: work arrives under the light ------- */
+/* ---------- A única animação: o conteúdo entra na luz ------------------- */
 @media (prefers-reduced-motion: no-preference) {
   .rise { opacity: 0; transform: translateY(22px); }
   .rise.is-in {
@@ -668,7 +668,7 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
   @keyframes lampup { to { opacity: 1; } }
 }
 
-/* ---------- Print ------------------------------------------------------- */
+/* ---------- Impressão --------------------------------------------------- */
 @media print {
   .rail, .bar, .lamp, .menu, .skip { display: none !important; }
   body { background: #fff; color: #000; }

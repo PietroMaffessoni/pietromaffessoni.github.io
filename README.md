@@ -1,63 +1,50 @@
-# Portfólio, Pietro Maffessoni
+# Portfólio
 
-Site de uma página, HTML + CSS + JavaScript puro. Sem build, sem dependências, sem npm.
+Meu site pessoal. Uma página só, em HTML, CSS e JavaScript puro, sem build e sem
+dependência nenhuma.
 
-## Ver
+**Online em:** https://pietromaffessoni.github.io/Portifolio/
 
-Abra `index.html` no navegador. É isso.
+## Rodar
 
-Se quiser um servidor local (necessário só se você adicionar coisas que o navegador
-bloqueia em `file://`):
+Abre o `index.html` no navegador e pronto.
+
+Se quiser servir por HTTP:
 
 ```
 python -m http.server 5173
 ```
 
-e abra `http://localhost:5173`.
+e abre `http://localhost:5173`.
 
 ## Arquivos
 
 ```
-index.html      a página inteira, nos dois idiomas
-styles.css      o sistema visual completo
-main.js         idioma, revelação na entrada, seção atual, menu
-fonts/          Archivo e Azeret Mono, self-hosted (nenhuma chamada externa de fonte)
+index.html   a página inteira, nos dois idiomas
+styles.css   todo o visual
+main.js      idioma, animação de entrada, seção atual, menu e copiar e-mail
+fonts/       Archivo e Azeret Mono locais, nenhuma chamada externa
+img/         fotos e ícones das tecnologias
 ```
 
 ## Idiomas
 
-O português está escrito no HTML. O inglês fica no atributo `data-en` do mesmo elemento:
+O português está escrito no HTML e o inglês fica no `data-en` do mesmo elemento:
 
 ```html
-<h2 data-en="Selected work">Trabalho selecionado</h2>
+<h2 data-en="Some projects">Alguns projetos</h2>
 ```
 
-Para imagens, `data-en-alt`. Para rótulos de acessibilidade, `data-en-aria`.
-Sempre que criar um texto novo, escreva os dois. Sem JavaScript o site abre em português.
+Para imagem é `data-en-alt` e para acessibilidade é `data-en-aria`. Texto novo precisa
+dos dois. Sem JavaScript a página abre em português, e a escolha fica no `localStorage`.
 
-A escolha fica salva em `localStorage`. Na primeira visita, se o navegador não estiver
-em português, o site abre em inglês sozinho.
-
-## Publicar
-
-Qualquer host estático serve. O repositório inteiro é o site.
-
-- **Vercel**: `npx vercel` na pasta, ou conecte o repositório no painel.
-- **Netlify**: arraste a pasta em app.netlify.com/drop.
-- **GitHub Pages**: suba o repositório e ligue Pages na branch `main`, pasta raiz.
-
-## Antes de publicar
-
-As imagens, os ícones e as fontes já são
-arquivos locais, e os links de LinkedIn, GitHub e e-mail já estão certos.
-
-## Detalhes que é bom não quebrar
+## Detalhes para não quebrar
 
 - Todo o movimento respeita `prefers-reduced-motion`.
 - Não existe nenhum listener de `scroll`. A seção atual vem de `IntersectionObserver`
   e a barra de progresso vem de uma timeline de rolagem em CSS.
-- As fontes são locais. Não adicione `<link>` para o Google Fonts.
-- O botão "Copiar o endereço" existe porque `mailto:` só abre alguma coisa em quem tem
-  aplicativo de e-mail configurado. Ele tenta a API de clipboard, cai para
-  `execCommand` e, se nem isso funcionar, deixa o e-mail selecionado na tela.
-- Um único acento de cor, o âmbar da luminária.
+- As fontes são locais, então nada de `<link>` para o Google Fonts.
+- Uma cor de destaque só, o âmbar da luminária.
+- O botão de copiar existe porque `mailto:` depende de ter aplicativo de e-mail
+  configurado. Ele tenta a API de clipboard, cai para `execCommand` e, se nada
+  funcionar, deixa o e-mail selecionado na tela.
