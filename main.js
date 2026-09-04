@@ -156,6 +156,12 @@
   }
 
   /* ---------------------------------------------------------------------
+     4b. The year in the footer writes itself, so the page does not go stale.
+     --------------------------------------------------------------------- */
+  var yearEl = document.querySelector(".js-year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  /* ---------------------------------------------------------------------
      5. Mobile menu.
      --------------------------------------------------------------------- */
   var menuBtn = document.querySelector(".menu-btn");
