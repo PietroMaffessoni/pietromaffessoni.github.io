@@ -582,6 +582,12 @@ html { scrollbar-color: #2a2a2f var(--ink); scrollbar-width: thin; caret-color: 
 }
 .mailto:hover { color: var(--lamp); background-size: 100% 1px; }
 
+.mail-actions { display: flex; flex-wrap: wrap; align-items: center;
+                gap: var(--s-3); margin-top: var(--s-4); }
+.copy__said { font-size: 0.8125rem; color: var(--lamp); opacity: 0;
+              transition: opacity .25s var(--ease-soft); }
+.copy__said.is-on { opacity: 1; }
+
 .reach { display: flex; flex-wrap: wrap; gap: var(--s-5) var(--s-7); }
 .reach > * { display: grid; gap: 6px; align-content: start; justify-items: start; }
 .reach > * > span:last-child { font-size: 1rem; color: var(--text-2);

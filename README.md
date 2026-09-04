@@ -48,9 +48,8 @@ Qualquer host estático serve. O repositório inteiro é o site.
 
 ## Antes de publicar
 
-1. Troque as imagens de `picsum.photos` por arquivos reais em `img/`.
-2. Confirme os links de LinkedIn e GitHub, hoje eles não vão a lugar nenhum.
-3. Decida se o e-mail fica público.
+As imagens, os ícones e as fontes já são
+arquivos locais, e os links de LinkedIn, GitHub e e-mail já estão certos.
 
 ## Detalhes que é bom não quebrar
 
@@ -58,4 +57,7 @@ Qualquer host estático serve. O repositório inteiro é o site.
 - Não existe nenhum listener de `scroll`. A seção atual vem de `IntersectionObserver`
   e a barra de progresso vem de uma timeline de rolagem em CSS.
 - As fontes são locais. Não adicione `<link>` para o Google Fonts.
+- O botão "Copiar o endereço" existe porque `mailto:` só abre alguma coisa em quem tem
+  aplicativo de e-mail configurado. Ele tenta a API de clipboard, cai para
+  `execCommand` e, se nem isso funcionar, deixa o e-mail selecionado na tela.
 - Um único acento de cor, o âmbar da luminária.

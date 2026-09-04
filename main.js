@@ -162,6 +162,69 @@
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   /* ---------------------------------------------------------------------
+     4c. The address. A mailto: link only goes anywhere when the visitor
+         has a mail app set up, and plenty of people do not, so the
+         address can be copied as well.
+     --------------------------------------------------------------------- */
+  var copyBtn = document.querySelector(".copy");
+  var said = document.querySelector(".copy__said");
+
+  if (copyBtn && said) {
+    var saidTimer = null;
+
+    // last resort: leave the address selected so Ctrl+C is enough
+    var selectAddress = function () {
+      var link = document.querySelector(".mailto");
+      if (!link || !window.getSelection || !document.createRange) return;
+      var range = document.createRange();
+      range.selectNodeContents(link);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    };
+
+    var tell = function (ok) {
+      var en = root.getAttribute("lang") === "en";
+      if (ok) {
+        said.textContent = en ? "copied" : "copiado";
+      } else {
+        selectAddress();
+        said.textContent = en ? "selected, just copy it" : "selecionei, é só copiar";
+      }
+      said.classList.add("is-on");
+      clearTimeout(saidTimer);
+      saidTimer = setTimeout(function () { said.classList.remove("is-on"); }, 2800);
+    };
+
+    var legacyCopy = function (text) {
+      var field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.top = "-1000px";
+      document.body.appendChild(field);
+      field.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      document.body.removeChild(field);
+      return ok;
+    };
+
+    copyBtn.addEventListener("click", function () {
+      var text = copyBtn.getAttribute("data-copy");
+      // the clipboard API needs a secure context, and file:// is not one
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(
+          function () { tell(true); },
+          function () { tell(legacyCopy(text)); }
+        );
+      } else {
+        tell(legacyCopy(text));
+      }
+    });
+  }
+
+  /* ---------------------------------------------------------------------
      5. Mobile menu.
      --------------------------------------------------------------------- */
   var menuBtn = document.querySelector(".menu-btn");
