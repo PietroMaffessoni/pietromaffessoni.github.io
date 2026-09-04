@@ -3,7 +3,7 @@
 Meu site pessoal. Uma página só, em HTML, CSS e JavaScript puro, sem build e sem
 dependência nenhuma.
 
-**Online em:** https://pietromaffessoni.github.io/Portifolio/
+**Online em:** https://pietromaffessoni.github.io/
 
 ## Rodar
 
